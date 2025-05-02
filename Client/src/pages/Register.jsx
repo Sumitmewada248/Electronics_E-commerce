@@ -13,6 +13,7 @@ const Register = () => {
     e.preventDefault();
     if (!name || !email || !password) {
       toast.error("All fields are required!");
+      
     } else {
  let api=`${BASEURL}/user/register`    
       try {

@@ -10,10 +10,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
 const Computer = () => {
   const [product, setProduct] = useState([]);
   const dispatch = useDispatch();
 
+  
   useEffect(() => {
     const fetchTrendingProducts = async () => {
       const api = `${BASEURL}/product/computer`;
