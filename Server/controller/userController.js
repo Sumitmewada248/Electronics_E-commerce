@@ -10,7 +10,6 @@ const Login = async (req, res) => {
         if (!user) {
             return res.status(400).send({ message: "Invalid username" });
         }
-
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).send({ message: "Invalid password" });
@@ -22,6 +21,7 @@ const Login = async (req, res) => {
         res.status(500).send({ message: "Internal server error" });
     }
 }
+
 
 const Register = async (req, res) => {
     const { name, email, password } = req.body;

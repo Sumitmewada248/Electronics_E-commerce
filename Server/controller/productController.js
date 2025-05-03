@@ -7,7 +7,9 @@ const TrendingProduct=async(req,res)=>{
         res.status(500).send({message:"Internal server error"});
     }
 }
+
 const Laptop=async(req,res)=>{
+
     try {
         const products=await ProductModel.find({category:"laptop"});
         res.status(200).send(products);

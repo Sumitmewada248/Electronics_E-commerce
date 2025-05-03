@@ -8,6 +8,7 @@ const OrderModel = require("../model/OrderModel");
 router.post("/orders",async(req,res) => {
 const {  amount,productname, userid,email,name} = req.body;
 
+
 const order= await OrderModel.create({
     totalamount:amount,
     productname:productname,
