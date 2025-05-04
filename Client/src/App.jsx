@@ -21,7 +21,6 @@ import Login from "./admin/Login";
 import ProtectedRoute from "./admin/ProtectedRoute";
 import Register from "./pages/Register";
 
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -45,11 +44,10 @@ const App = () => {
 
           {/* Admin Routes */}
 
+
    <Route path="/admin" element={<Login/>}/>
 
-
-
-          <Route path="/admindashboard" element={<ProtectedRoute Component={AdminDashboard}/>}>
+<Route path="/admindashboard" element={<ProtectedRoute Component={AdminDashboard}/>}>
             <Route index element={<AHome />} />
             <Route path="adminhome" element={<AHome />} />
             <Route path="insertpro" element={<InsertProduct />} />
